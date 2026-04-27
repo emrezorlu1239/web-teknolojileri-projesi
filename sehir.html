@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şehrim</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +29,124 @@
         </div>
     </nav>
 
+    <header class="city-header text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">[Şehir Adı]</h1>
+            <p class="lead">Keşfedilmeyi bekleyen güzel bir şehir</p>
+        </div>
+    </header>
+
     <main class="container my-5">
+        <section id="genel-bilgiler" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Genel Bilgiler</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-people me-2"></i>Nüfus</h3>
+                                <p class="card-text">Şehrin nüfusu yaklaşık [Nüfus] kişidir. Yıllar içinde sürekli büyüyen ve gelişen bir şehir olma özelliğini korumaktadır.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-geo-alt me-2"></i>Coğrafi Konum</h3>
+                                <p class="card-text">[Şehir Adı], [Bölge] bölgesinde yer almakta olup, [Deniz/Ova] kıyısında konumlanmıştır. Toplam yüzölçümü [Yüzölçümü] km²'dir.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><i class="bi bi-clock-history me-2"></i>Tarihçe</h3>
+                                <p class="card-text">Şehir, [Tarih] yılından bu yana yerleşim yeridir. Tarihi boyunca [Önemli Olaylar] gibi önemli olaylara ev sahipliği yapmıştır.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gezilecek-yerler" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Gezilecek Yerler</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="place-card h-100">
+                            <img src="img/sehir1.jpg" alt="Gezilecek Yer 1" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Yer 1</h3>
+                                <p class="card-text">Bu tarihi mekan, şehrin en önemli turistik yerlerinden biridir. Ziyaretçilerine benzersiz bir kültürel deneyim sunmaktadır.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="place-card h-100">
+                            <img src="img/sehir2.jpg" alt="Gezilecek Yer 2" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Yer 2</h3>
+                                <p class="card-text">Doğal güzellikleri ve eşsiz manzarası ile ünlü bu yer, hem yerli hem de yabancı turistlerin ilgi odağıdır.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="place-card h-100">
+                            <img src="img/sehir3.jpg" alt="Gezilecek Yer 3" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Yer 3</h3>
+                                <p class="card-text">Şehrin kalbinde yer alan bu önemli yapı, mimari açıdan dikkat çekici ve tarihi değeri yüksek bir mekândır.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Şehirden Görüntüler</h2>
+                <div id="cityCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="img/slider1.jpg" target="_blank">
+                                <img src="img/slider1.jpg" class="d-block w-100 carousel-img" alt="Slider 1">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="img/slider2.jpg" target="_blank">
+                                <img src="img/slider2.jpg" class="d-block w-100 carousel-img" alt="Slider 2">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="img/slider3.jpg" target="_blank">
+                                <img src="img/slider3.jpg" class="d-block w-100 carousel-img" alt="Slider 3">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="img/slider4.jpg" target="_blank">
+                                <img src="img/slider4.jpg" class="d-block w-100 carousel-img" alt="Slider 4">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
