@@ -1,43 +1,155 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+:root {
+    --accent-color: #e94560;
+    --navbar-bg: #1a1a2e;
+}
 
-/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding-top: 70px;
 }
 
 main {
     flex: 1;
 }
 
-/* Navbar Styles */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-dark {
+    background-color: var(--navbar-bg);
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
 }
 
-/* Footer Styles */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    color: #fff !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.nav-link.active::after {
+    width: 70%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+}
+
 footer {
-    margin-top: auto;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 3rem 0 1.5rem;
 }
 
-/* Form Styles */
-.form-container {
-    max-width: 500px;
-    margin: 0 auto;
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
 }
 
-/* Card Styles */
-.card {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+footer ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Hero Section */
+footer ul li {
+    margin-bottom: 0.75rem;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .hero-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 1rem;
@@ -50,10 +162,9 @@ footer {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Section Titles */
 .section-title {
     font-weight: 700;
     color: #2c3e50;
@@ -70,35 +181,30 @@ footer {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #0d6efd;
+    background-color: var(--accent-color);
     border-radius: 2px;
 }
 
-/* About Section */
 .about-content {
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid var(--accent-color);
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
-/* Hobbies Section */
-#hobiler .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    border-radius: 1rem;
-}
-
-#hobiler .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
 .hobby-icon {
     font-size: 3rem;
-    color: #0d6efd;
+    color: var(--accent-color);
 }
 
-/* Media Section */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 .media-card {
     background: #f8f9fa;
     padding: 1rem;
@@ -109,7 +215,6 @@ footer {
     border-radius: 0.5rem;
 }
 
-/* Social Buttons */
 .social-btn {
     display: inline-flex;
     align-items: center;
@@ -125,15 +230,13 @@ footer {
     font-size: 1.5rem;
 }
 
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
 .social-btn.github-btn {
     background-color: #24292e;
     color: #fff;
-}
-
-.social-btn.github-btn:hover {
-    background-color: #3d444d;
-    color: #fff;
-    transform: translateY(-2px);
 }
 
 .social-btn.linkedin-btn {
@@ -141,44 +244,11 @@ footer {
     color: #fff;
 }
 
-.social-btn.linkedin-btn:hover {
-    background-color: #006097;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
 .social-btn.email-btn {
     background-color: #ea4335;
     color: #fff;
 }
 
-.social-btn.email-btn:hover {
-    background-color: #d33426;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero-profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .display-4 {
-        font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 1.75rem;
-    }
-
-    #hobiler .col-md-6 {
-        margin-bottom: 1rem;
-    }
-}
-
-/* CV Styles */
 .cv-header {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 1rem;
@@ -191,14 +261,14 @@ footer {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .cv-section {
     background: #fff;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .edu-card {
@@ -206,7 +276,7 @@ footer {
     padding: 1.25rem;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid var(--accent-color);
 }
 
 .edu-year {
@@ -225,12 +295,6 @@ footer {
     background: #fff;
     border: 1px solid #dee2e6;
     border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .skill-item label {
@@ -245,17 +309,6 @@ footer {
     border-radius: 2rem;
 }
 
-.personal-skill:hover {
-    background-color: #dee2e6;
-}
-
-@media (max-width: 991px) {
-    .cv-section {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Şehir Sayfası Stilleri */
 .city-header {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 1rem;
@@ -266,17 +319,11 @@ footer {
     background: #fff;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-card .card-title {
-    color: #0d6efd;
+    color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -290,13 +337,7 @@ footer {
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.place-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .place-card img {
@@ -322,7 +363,7 @@ footer {
 #galeri .carousel {
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-img {
@@ -332,26 +373,19 @@ footer {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     background-size: 50%;
 }
 
 .carousel-indicators button {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .carousel-indicators .active {
-    background-color: #0d6efd;
+    background-color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
-    .carousel-img {
-        height: 300px;
-    }
-}
-
-/* Miras Sayfası Stilleri */
 .miras-hero {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: #fff;
@@ -365,7 +399,7 @@ footer {
 }
 
 .miras-hero .lead {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.25rem;
 }
 
@@ -376,29 +410,55 @@ footer {
 
 .miras-blockquote {
     background: #fff;
-    border-left: 5px solid #0d6efd;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.miras-blockquote .bi-quote {
-    opacity: 0.3;
-}
-
-.miras-blockquote blockquote-footer {
-    font-size: 1rem;
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
+    .hero-profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .carousel-img {
+        height: 300px;
+    }
+
     .miras-hero {
         padding: 3rem 0;
-        text-align: center;
     }
-    
+
     .miras-hero .display-3 {
         font-size: 2rem;
     }
-    
+
     .miras-hero img {
         max-height: 250px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

@@ -3,37 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlgi Alanlarım</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>İlgi Alanlarım | Web Projesi</title>
+    <meta name="description" content="Kişisel ilgi alanlarım ve hobilerim.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Web Projesi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main class="container my-5">
+    <main class="container my-5 py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="section-title text-center mb-5">İlgi Alanlarım</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-camera hobby-icon"></i>
+                                <h3 class="h5 card-title mt-3">Fotoğrafçılık</h3>
+                                <p class="card-text">Doğa ve şehir manzaralarını fotoğraflamak keyifli bir hobby.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-book hobby-icon"></i>
+                                <h3 class="h5 card-title mt-3">Kitap Okuma</h3>
+                                <p class="card-text">Bilim kurgu ve kişisel gelişim kitapları okumayı tercih ediyorum.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-controller hobby-icon"></i>
+                                <h3 class="h5 card-title mt-3">Oyun Geliştirme</h3>
+                                <p class="card-text">Kendi oyun projelerimi geliştirmek keyifli bir hobby.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer>
         <div class="container">
-            <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Web Projesi</h5>
+                    <p class="text-muted">Kişisel web siteniz.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Hızlı Linkler</h5>
+                    <ul>
+                        <li><a href="index.html">Hakkında</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim</h5>
+                    <ul>
+                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
         </div>
     </footer>
 

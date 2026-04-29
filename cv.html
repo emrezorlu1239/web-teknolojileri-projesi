@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Özgeçmiş</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>CV - Özgeçmiş | Web Projesi</title>
+    <meta name="description" content="Yazılım mühendisi özgeçmişi. Eğitim, deneyim ve teknik beceriler.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Web Projesi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -57,184 +54,74 @@
                             </div>
                         </div>
                     </article>
-                    <article class="edu-card">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <span class="edu-year">2018 - 2022</span>
-                            </div>
-                            <div class="col-md-9">
-                                <h3 class="h5">Fen Lisesi</h3>
-                                <p class="edu-school mb-2">Anadolu Lisesi</p>
-                                <span class="badge bg-primary">Not Ortalaması: 92/100</span>
-                            </div>
-                        </div>
-                    </article>
                 </section>
-
                 <section id="deneyim" class="cv-section mb-5">
                     <h2 class="section-title mb-4">Deneyim ve Projeler</h2>
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <article class="experience-card h-100">
+                            <article class="card experience-card h-100">
                                 <div class="card-body">
                                     <span class="badge bg-success mb-2">Proje</span>
                                     <h3 class="h5 mt-3">E-Ticaret Platformu</h3>
                                     <p class="text-muted small">2025 - Devam Ediyor</p>
-                                    <p class="card-text">Modern bir e-ticaret platformu geliştirdim. React, Node.js ve MongoDB kullanılarak tasarlandı. Ödeme sistemi entegrasyonu ve yönetim paneli dahil.</p>
-                                    <span class="badge bg-secondary">React</span>
-                                    <span class="badge bg-secondary">Node.js</span>
-                                    <span class="badge bg-secondary">MongoDB</span>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6">
-                            <article class="experience-card h-100">
-                                <div class="card-body">
-                                    <span class="badge bg-info mb-2">Staj</span>
-                                    <h3 class="h5 mt-3">Yazılım Geliştirme Stajyeri</h3>
-                                    <p class="text-muted small">2024 Yaz (3 Ay)</p>
-                                    <p class="card-text">Teknoloji şirketinde yazılım geliştirme departmanında staj yaptım. Gerçek projelerde görev aldım ve ekip çalışması deneyimi kazandım.</p>
-                                    <span class="badge bg-secondary">JavaScript</span>
-                                    <span class="badge bg-secondary">SQL</span>
-                                    <span class="badge bg-secondary">Git</span>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6">
-                            <article class="experience-card h-100">
-                                <div class="card-body">
-                                    <span class="badge bg-warning mb-2">Proje</span>
-                                    <h3 class="h5 mt-3">Kişisel Blog Sitesi</h3>
-                                    <p class="text-muted small">2023</p>
-                                    <p class="card-text">Kendi blog sitemi geliştirdim. SEO uyumlu, responsive tasarım ve admin paneli içeriyor. Bootstrap 5 ve PHP kullanıldı.</p>
-                                    <span class="badge bg-secondary">Bootstrap 5</span>
-                                    <span class="badge bg-secondary">PHP</span>
-                                    <span class="badge bg-secondary">MySQL</span>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6">
-                            <article class="experience-card h-100">
-                                <div class="card-body">
-                                    <span class="badge bg-primary mb-2">Öğrenci Projesi</span>
-                                    <h3 class="h5 mt-3">Öğrenci Yönetim Sistemi</h3>
-                                    <p class="text-muted small">2023</p>
-                                    <p class="card-text">Üniversite projesi olarak geliştirildi. Öğrenci kayıt, not girişi ve raporlama özellikleri mevcut. Katılım Belgesi aldı.</p>
-                                    <span class="badge bg-secondary">C#</span>
-                                    <span class="badge bg-secondary">SQL Server</span>
+                                    <p class="card-text">Modern bir e-ticaret platformu geliştirdim.</p>
                                 </div>
                             </article>
                         </div>
                     </div>
                 </section>
             </div>
-
             <aside class="col-lg-4">
                 <section id="beceriler" class="cv-section mb-5">
                     <h2 class="section-title mb-4">Teknik Beceriler</h2>
                     <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>HTML/CSS</span>
-                            <span class="text-muted">90%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                        </div>
+                        <label class="d-flex justify-content-between mb-1"><span>HTML/CSS</span><span class="text-muted">90%</span></label>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width: 90%"></div></div>
                     </div>
                     <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>JavaScript</span>
-                            <span class="text-muted">85%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>Bootstrap 5</span>
-                            <span class="text-muted">95%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>React</span>
-                            <span class="text-muted">75%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>Node.js</span>
-                            <span class="text-muted">70%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>Python</span>
-                            <span class="text-muted">65%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 65%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-3">
-                        <label class="d-flex justify-content-between mb-1">
-                            <span>SQL</span>
-                            <span class="text-muted">80%</span>
-                        </label>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-                        </div>
+                        <label class="d-flex justify-content-between mb-1"><span>JavaScript</span><span class="text-muted">85%</span></label>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width: 85%"></div></div>
                     </div>
                 </section>
-
-                <section id="kisisel-beceriler" class="cv-section mb-5">
-                    <h2 class="section-title mb-4">Kişisel Beceriler</h2>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge personal-skill">Takım Çalışması</span>
-                        <span class="badge personal-skill">İletişim</span>
-                        <span class="badge personal-skill">Problem Çözme</span>
-                        <span class="badge personal-skill">Zaman Yönetimi</span>
-                        <span class="badge personal-skill">Kendini Geliştirme</span>
-                        <span class="badge personal-skill">Analitik Düşünce</span>
-                        <span class="badge personal-skill">Adaptasyon</span>
-                        <span class="badge personal-skill">Delegasyon</span>
-                    </div>
-                </section>
-
                 <section id="diller" class="cv-section mb-5">
                     <h2 class="section-title mb-4">Diller</h2>
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Türkçe</span>
-                            <span class="badge bg-primary rounded-pill">Ana Dil</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>İngilizce</span>
-                            <span class="badge bg-success rounded-pill">İleri Seviye</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Almanca</span>
-                            <span class="badge bg-warning rounded-pill">Başlangıç</span>
-                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center"><span>Türkçe</span><span class="badge bg-primary rounded-pill">Ana Dil</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center"><span>İngilizce</span><span class="badge bg-success rounded-pill">İleri Seviye</span></li>
                     </ul>
                 </section>
             </aside>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer>
         <div class="container">
-            <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Web Projesi</h5>
+                    <p class="text-muted">Web geliştirme ve tasarım konusunda tutkulu bir yazılım mühendisinin kişisel web sitesi.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Hızlı Linkler</h5>
+                    <ul>
+                        <li><a href="index.html">Hakkında</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="sehir.html">Şehrim</a></li>
+                        <li><a href="miras.html">Mirasımız</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim</h5>
+                    <ul>
+                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                        <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
         </div>
     </footer>
 

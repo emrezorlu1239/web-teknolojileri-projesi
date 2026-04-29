@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkında</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hakkında - Web Projesi</title>
+    <meta name="description" content="Web geliştirme ve tasarım konusunda tutkulu bir yazılım mühendisinin kişisel web sitesi.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Web Projesi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -35,7 +32,7 @@
                     <div class="col-12">
                         <img src="img/profil.jpg" alt="Profil Fotoğrafı" class="hero-profile-img mb-4">
                         <h1 class="display-4 fw-bold">Merhaba, Ben [Ad Soyad]</h1>
-                        <p class="lead text-muted">Web geliştirme ve tasarım konusunda tutkulu bir yazılım mühendisiyim. Modern teknolojilerle yenilikçi projeler geliştirmeyi seviyorum.</p>
+                        <p class="lead text-muted">Web geliştirme ve tasarım konusunda tutkulu bir yazılım mühendisiyim.</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +44,7 @@
                     <div class="col-lg-8">
                         <h2 class="section-title text-center mb-4">Hakkımda</h2>
                         <div class="about-content bg-light p-4 rounded">
-                            <p class="mb-0">Bilgisayar mühendisliği alanında eğitim alıyorum ve yazılım geliştirme süreçlerine büyük bir tutkuyla bağlıyım. Özellikle web teknolojileri, kullanıcı deneyimi tasarımı ve modern JavaScript framework'leri ilgi alanlarımın başında geliyor. Boş zamanlarımda yeni teknolojiler öğrenmeye ve kişisel projeler geliştirmeye ayırıyorum.</p>
+                            <p class="mb-0">Bilgisayar mühendisliği alanında eğitim alıyorum ve yazılım geliştirme süreçlerine büyük bir tutkuyla bağlıyım.</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +69,7 @@
                             <div class="card-body text-center">
                                 <i class="bi bi-book hobby-icon"></i>
                                 <h3 class="h5 card-title mt-3">Kitap Okuma</h3>
-                                <p class="card-text">Özellikle bilim kurgu ve kişisel gelişim kitapları okumayı tercih ediyorum. Her kitaptan yeni bir şeyler öğreniyorum.</p>
+                                <p class="card-text">Özellikle bilim kurgu ve kişisel gelişim kitapları okumayı tercih ediyorum.</p>
                             </div>
                         </article>
                     </div>
@@ -81,7 +78,7 @@
                             <div class="card-body text-center">
                                 <i class="bi bi-controller hobby-icon"></i>
                                 <h3 class="h5 card-title mt-3">Oyun Geliştirme</h3>
-                                <p class="card-text">Kendı oyun projelerimi geliştirmek ve oyun mekaniklerini tasarlamak keyifli bir hobby.</p>
+                                <p class="card-text">Kendi oyun projelerimi geliştirmek keyifli bir hobby.</p>
                             </div>
                         </article>
                     </div>
@@ -118,13 +115,13 @@
                 <h2 class="section-title text-center mb-5">İletişim ve Sosyal Bağlantılar</h2>
                 <div class="row justify-content-center g-4">
                     <div class="col-auto">
-                        <a href="https://github.com/emrezorlu1239" target="_blank" rel="noopener noreferrer" class="social-btn github-btn">
+                        <a href="https://github.com/emrezorlu1239" target="_blank" class="social-btn github-btn">
                             <i class="bi bi-github"></i>
                             <span>GitHub</span>
                         </a>
                     </div>
                     <div class="col-auto">
-                        <a href="https://linkedin.com/in/emrezorlu" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn">
+                        <a href="https://linkedin.com/in/emrezorlu" target="_blank" class="social-btn linkedin-btn">
                             <i class="bi bi-linkedin"></i>
                             <span>LinkedIn</span>
                         </a>
@@ -140,9 +137,40 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer>
         <div class="container">
-            <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Web Projesi</h5>
+                    <p class="text-muted">Web geliştirme ve tasarım konusunda tutkulu bir yazılım mühendisinin kişisel web sitesi.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Hızlı Linkler</h5>
+                    <ul>
+                        <li><a href="index.html">Hakkında</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="sehir.html">Şehrim</a></li>
+                        <li><a href="miras.html">Mirasımız</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim</h5>
+                    <ul>
+                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                        <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/emrezorlu" target="_blank">LinkedIn</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://github.com/emrezorlu1239" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://linkedin.com/in/emrezorlu" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:ornek@email.com"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </div>
         </div>
     </footer>
 
