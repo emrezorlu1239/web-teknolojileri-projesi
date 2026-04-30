@@ -419,6 +419,32 @@ footer a:hover {
     margin: 0 auto;
 }
 
+.error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.valid-tick {
+    display: none;
+    color: #198754;
+    margin-left: 0.5rem;
+}
+
+.input-error {
+    border-color: #dc3545 !important;
+}
+
+.input-valid {
+    border-color: #198754 !important;
+}
+
+.social-btn.kaggle-btn {
+    background-color: #20beff;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .hero-profile-img {
         width: 150px;

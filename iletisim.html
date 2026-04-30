@@ -31,20 +31,83 @@
                 <h1 class="section-title text-center mb-5">İletişim</h1>
                 <div class="card">
                     <div class="card-body p-5">
-                        <form id="iletisimForm" class="form-container">
+                    <form id="iletisimForm" class="form-container" action="php/iletisim_islem.php" method="POST">
                             <div class="mb-3">
-                                <label for="ad" class="form-label">Adınız</label>
-                                <input type="text" class="form-control" id="ad" required>
+                                <label for="ad" class="form-label">Ad Soyad</label>
+                                <input type="text" class="form-control" id="ad" name="ad">
+                                <span class="error-message" id="adError"></span>
+                                <span class="valid-tick" id="adTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">E-posta Adresiniz</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <label for="email" class="form-label">E-posta</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                                <span class="error-message" id="emailError"></span>
+                                <span class="valid-tick" id="emailTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tel" class="form-label">Telefon</label>
+                                <input type="tel" class="form-control" id="tel" name="tel">
+                                <span class="error-message" id="telError"></span>
+                                <span class="valid-tick" id="telTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Şifre</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                                <span class="error-message" id="passwordError"></span>
+                                <span class="valid-tick" id="passwordTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dogumTarihi" class="form-label">Doğum Tarihi</label>
+                                <input type="date" class="form-control" id="dogumTarihi" name="dogumTarihi">
+                                <span class="error-message" id="dogumTarihiError"></span>
+                                <span class="valid-tick" id="dogumTarihiTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="konu" class="form-label">Konu Seçimi</label>
+                                <select class="form-select" id="konu" name="konu">
+                                    <option value="">Seçiniz</option>
+                                    <option value="genel">Genel Bilgi</option>
+                                    <option value="destek">Teknik Destek</option>
+                                    <option value="oneri">Öneri/Şikayet</option>
+                                </select>
+                                <span class="error-message" id="konuError"></span>
+                                <span class="valid-tick" id="konuTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">İletişim Tercihi</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihTelefon" value="telefon">
+                                    <label class="form-check-label" for="tercihTelefon">Telefon</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihEmail" value="email">
+                                    <label class="form-check-label" for="tercihEmail">E-posta</label>
+                                </div>
+                                <span class="error-message" id="iletisimTercihiError"></span>
+                                <span class="valid-tick" id="iletisimTercihiTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="mesaj" class="form-label">Mesajınız</label>
-                                <textarea class="form-control" id="mesaj" rows="5" required></textarea>
+                                <textarea class="form-control" id="mesaj" name="mesaj" rows="5"></textarea>
+                                <span class="error-message" id="mesajError"></span>
+                                <span class="valid-tick" id="mesajTick"><i class="bi bi-check-circle"></i></span>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                            <div class="mb-3">
+                                <label for="dosya" class="form-label">Dosya Yükle</label>
+                                <input type="file" class="form-control" id="dosya" name="dosya">
+                                <span class="error-message" id="dosyaError"></span>
+                                <span class="valid-tick" id="dosyaTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="kvkk" name="kvkk">
+                                <label class="form-check-label" for="kvkk">KVKK kapsamında verilerimin işlenmesini onaylıyorum.</label>
+                                <span class="error-message" id="kvkkError"></span>
+                                <span class="valid-tick" id="kvkkTick"><i class="bi bi-check-circle"></i></span>
+                            </div>
+                            <div class="d-grid gap-3 mt-4">
+                                <button type="button" class="btn btn-primary btn-lg" id="nativeValidateBtn">Native JS ile Doğrula</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg" id="vueValidateBtn">Vue.js ile Doğrula (Yaklaşanda)</button>
+                            </div>
                         </form>
                     </div>
                 </div>
