@@ -426,6 +426,10 @@ footer a:hover {
     margin-top: 0.25rem;
 }
 
+.vue-error {
+    display: block !important;
+}
+
 .valid-tick {
     display: none;
     color: #198754;

@@ -32,82 +32,94 @@
                 <div class="card">
                     <div class="card-body p-5">
                     <form id="iletisimForm" class="form-container" action="php/iletisim_islem.php" method="POST">
+                        <div id="vueApp">
                             <div class="mb-3">
                                 <label for="ad" class="form-label">Ad Soyad</label>
-                                <input type="text" class="form-control" id="ad" name="ad">
+                                <input type="text" class="form-control" id="ad" name="ad" v-model="vueForm.ad">
                                 <span class="error-message" id="adError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.ad">{{ vueErrors.ad }}</span>
                                 <span class="valid-tick" id="adTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">E-posta</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <input type="email" class="form-control" id="email" name="email" v-model="vueForm.email">
                                 <span class="error-message" id="emailError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.email">{{ vueErrors.email }}</span>
                                 <span class="valid-tick" id="emailTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="tel" class="form-label">Telefon</label>
-                                <input type="tel" class="form-control" id="tel" name="tel">
+                                <input type="tel" class="form-control" id="tel" name="tel" v-model="vueForm.tel">
                                 <span class="error-message" id="telError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.tel">{{ vueErrors.tel }}</span>
                                 <span class="valid-tick" id="telTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Şifre</label>
-                                <input type="password" class="form-control" id="password" name="password">
+                                <input type="password" class="form-control" id="password" name="password" v-model="vueForm.password">
                                 <span class="error-message" id="passwordError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.password">{{ vueErrors.password }}</span>
                                 <span class="valid-tick" id="passwordTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="dogumTarihi" class="form-label">Doğum Tarihi</label>
-                                <input type="date" class="form-control" id="dogumTarihi" name="dogumTarihi">
+                                <input type="date" class="form-control" id="dogumTarihi" name="dogumTarihi" v-model="vueForm.dogumTarihi">
                                 <span class="error-message" id="dogumTarihiError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.dogumTarihi">{{ vueErrors.dogumTarihi }}</span>
                                 <span class="valid-tick" id="dogumTarihiTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="konu" class="form-label">Konu Seçimi</label>
-                                <select class="form-select" id="konu" name="konu">
+                                <select class="form-select" id="konu" name="konu" v-model="vueForm.konu">
                                     <option value="">Seçiniz</option>
                                     <option value="genel">Genel Bilgi</option>
                                     <option value="destek">Teknik Destek</option>
                                     <option value="oneri">Öneri/Şikayet</option>
                                 </select>
                                 <span class="error-message" id="konuError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.konu">{{ vueErrors.konu }}</span>
                                 <span class="valid-tick" id="konuTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">İletişim Tercihi</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihTelefon" value="telefon">
+                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihTelefon" value="telefon" v-model="vueForm.iletisimTercihi">
                                     <label class="form-check-label" for="tercihTelefon">Telefon</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihEmail" value="email">
+                                    <input class="form-check-input" type="radio" name="iletisimTercihi" id="tercihEmail" value="email" v-model="vueForm.iletisimTercihi">
                                     <label class="form-check-label" for="tercihEmail">E-posta</label>
                                 </div>
                                 <span class="error-message" id="iletisimTercihiError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.iletisimTercihi">{{ vueErrors.iletisimTercihi }}</span>
                                 <span class="valid-tick" id="iletisimTercihiTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="mesaj" class="form-label">Mesajınız</label>
-                                <textarea class="form-control" id="mesaj" name="mesaj" rows="5"></textarea>
+                                <textarea class="form-control" id="mesaj" name="mesaj" rows="5" v-model="vueForm.mesaj"></textarea>
                                 <span class="error-message" id="mesajError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.mesaj">{{ vueErrors.mesaj }}</span>
                                 <span class="valid-tick" id="mesajTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3">
                                 <label for="dosya" class="form-label">Dosya Yükle</label>
-                                <input type="file" class="form-control" id="dosya" name="dosya">
+                                <input type="file" class="form-control" id="dosya" name="dosya" @change="vueForm.dosya = $event.target.files[0]?.name || ''">
                                 <span class="error-message" id="dosyaError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.dosya">{{ vueErrors.dosya }}</span>
                                 <span class="valid-tick" id="dosyaTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="kvkk" name="kvkk">
+                                <input type="checkbox" class="form-check-input" id="kvkk" name="kvkk" v-model="vueForm.kvkk">
                                 <label class="form-check-label" for="kvkk">KVKK kapsamında verilerimin işlenmesini onaylıyorum.</label>
                                 <span class="error-message" id="kvkkError"></span>
+                                <span class="error-message vue-error" v-if="vueErrors.kvkk">{{ vueErrors.kvkk }}</span>
                                 <span class="valid-tick" id="kvkkTick"><i class="bi bi-check-circle"></i></span>
                             </div>
                             <div class="d-grid gap-3 mt-4">
                                 <button type="button" class="btn btn-primary btn-lg" id="nativeValidateBtn">Native JS ile Doğrula</button>
-                                <button type="button" class="btn btn-outline-secondary btn-lg" id="vueValidateBtn">Vue.js ile Doğrula (Yaklaşanda)</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg" id="vueValidateBtn" @click="vueValidate">Vue.js ile Doğrula</button>
                             </div>
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -144,6 +156,97 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="js/validasyon.js"></script>
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    vueForm: {
+                        ad: '',
+                        email: '',
+                        tel: '',
+                        password: '',
+                        dogumTarihi: '',
+                        konu: '',
+                        iletisimTercihi: '',
+                        mesaj: '',
+                        dosya: '',
+                        kvkk: false
+                    },
+                    vueErrors: {}
+                };
+            },
+            methods: {
+                vueValidate() {
+                    this.vueErrors = {};
+                    let isValid = true;
+
+                    if (!this.vueForm.ad.trim()) {
+                        this.vueErrors.ad = 'Ad Soyad zorunludur.';
+                        isValid = false;
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!this.vueForm.email.trim()) {
+                        this.vueErrors.email = 'E-posta zorunludur.';
+                        isValid = false;
+                    } else if (!emailRegex.test(this.vueForm.email)) {
+                        this.vueErrors.email = 'Gecerli bir e-posta adresi giriniz.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.tel.trim()) {
+                        this.vueErrors.tel = 'Telefon numarasi zorunludur.';
+                        isValid = false;
+                    } else if (!/^\d+$/.test(this.vueForm.tel)) {
+                        this.vueErrors.tel = 'Telefon numarasi sadece rakamlardan olusmalidir.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.password.trim()) {
+                        this.vueErrors.password = 'Sifre zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.dogumTarihi) {
+                        this.vueErrors.dogumTarihi = 'Dogum tarihi zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.konu) {
+                        this.vueErrors.konu = 'Konu secimi zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.iletisimTercihi) {
+                        this.vueErrors.iletisimTercihi = 'Iletisim tercihi zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.mesaj.trim()) {
+                        this.vueErrors.mesaj = 'Mesaj zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.dosya) {
+                        this.vueErrors.dosya = 'Dosya secimi zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (!this.vueForm.kvkk) {
+                        this.vueErrors.kvkk = 'KVKK onayi zorunludur.';
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        alert('Vue.js: Tum alanlar dogru! Form gonderiliyor...');
+                        document.getElementById('iletisimForm').submit();
+                    }
+                }
+            }
+        }).mount('#vueApp');
+    </script>
 </body>
 </html>
