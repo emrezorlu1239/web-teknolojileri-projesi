@@ -25,32 +25,55 @@
         </div>
     </nav>
 
-    <main class="container my-5 py-5">
-        <div class="row justify-content-center">
+    <main class="container d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 200px);">
+        <div class="row justify-content-center w-100">
             <div class="col-md-6 col-lg-4">
-                <div class="card">
+                <div class="card shadow-lg border-0">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-4">Giriş Yap</h2>
-                        <form id="loginForm" class="form-container">
+                        <h2 class="text-center mb-4 fw-bold">Giriş Yap</h2>
+                        <form id="loginForm" action="php/login_islem.php" method="POST">
                             <div class="mb-3">
-                                <label for="kullanici_adi" class="form-label">Kullanıcı Adı</label>
-                                <input type="text" class="form-control" id="kullanici_adi" required>
+                                <label for="email" class="form-label">E-posta</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="b241210037@sakarya.edu.tr" required>
                             </div>
                             <div class="mb-3">
-                                <label for="sifre" class="form-label">Şifre</label>
-                                <input type="password" class="form-control" id="sifre" required>
+                                <label for="password" class="form-label">Şifre</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Ogrenci Numarasi" required>
                             </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="hatirla">
-                                <label class="form-check-label" for="hatirla">Beni Hatırla</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Giriş Yap</button>
                         </form>
+                        <div id="errorMessage" class="alert alert-danger mt-3 py-2" style="display:none; font-size:0.9rem;"></div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('error') === '1') {
+            const errDiv = document.getElementById('errorMessage');
+            errDiv.textContent = 'Kullanici adi veya sifre hatali!';
+            errDiv.style.display = 'block';
+        }
+        const form = document.getElementById('loginForm');
+        form.addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (!email || !password) {
+                alert('Lütfen tüm alanları doldurun!');
+                e.preventDefault();
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Lütfen geçerli bir e-posta adresi girin!');
+                e.preventDefault();
+                return;
+            }
+        });
+    });
+    </script>
 
     <footer>
         <div class="container">
