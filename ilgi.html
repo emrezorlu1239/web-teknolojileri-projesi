@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İlgi Alanlarım | Web Projesi</title>
-    <meta name="description" content="Kişisel ilgi alanlarım ve hobilerim.">
+    <meta name="description" content="Oyun dunyasi ve ilgi alanlarim - RAWG API entegrasyonu.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,7 +18,7 @@
                 <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
                 <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link active" href="ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
             </ul>
@@ -26,48 +26,32 @@
     </nav>
 
     <main class="container my-5 py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <h1 class="section-title text-center mb-5">İlgi Alanlarım</h1>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <article class="card h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-controller hobby-icon"></i>
-                                <h3 class="h5 card-title mt-3">Oyun Oynamak</h3>
-                                <p class="card-text">Bilgisayar ve konsol oyunları oynamak en keyifli uğraşlarımdan biridir.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="card h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-film hobby-icon"></i>
-                                <h3 class="h5 card-title mt-3">Film İzlemek</h3>
-                                <p class="card-text">Sinema filmleri ve diziler izlemek keyif aldığım aktivitelerdendir.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="card h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-book hobby-icon"></i>
-                                <h3 class="h5 card-title mt-3">Kitap Okumak</h3>
-                                <p class="card-text">Bilim kurgu ve kişisel gelişim kitapları okumayı tercih ediyorum.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="card h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-code-slash hobby-icon"></i>
-                                <h3 class="h5 card-title mt-3">Kodlama Yapmak</h3>
-                                <p class="card-text">Yeni teknolojiler öğrenmek ve projeler geliştirmek benim için tutku.</p>
-                            </div>
-                        </article>
-                    </div>
+        <h1 class="section-title text-center mb-4">İlgi Alanlarım - Oyunlar</h1>
+        <p class="text-center text-muted mb-5">En sevilen ve en yuksek puanli oyunlari kesfet</p>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Oyun ara...">
+                    <button class="btn btn-primary" id="searchBtn" type="button">
+                        <i class="bi bi-search"></i> Ara
+                    </button>
                 </div>
             </div>
+        </div>
+
+        <div id="spinner" class="text-center my-5">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Yukleniyor...</span>
+            </div>
+            <p class="mt-3 text-muted">Oyunlar yukleniyor...</p>
+        </div>
+
+        <div id="errorMsg" class="alert alert-danger text-center d-none" role="alert">
+            Veriler yuklenirken hata olustu
+        </div>
+
+        <div id="gamesContainer" class="row g-4">
         </div>
     </main>
 
@@ -76,10 +60,10 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5>Web Projesi</h5>
-                    <p class="text-muted">Kişisel web siteniz.</p>
+                    <p class="text-muted">Kisisel web siteniz.</p>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Hızlı Linkler</h5>
+                    <h5>Hizli Linkler</h5>
                     <ul>
                         <li><a href="index.html">Hakkında</a></li>
                         <li><a href="cv.html">CV</a></li>
@@ -94,12 +78,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2026 Tüm Hakları Saklıdır.</p>
+                <p class="mb-0">&copy; 2026 Tum Haklari Saklidir.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/ilgi.js"></script>
 </body>
 </html>
