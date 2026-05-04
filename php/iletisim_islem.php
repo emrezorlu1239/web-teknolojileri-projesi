@@ -12,7 +12,7 @@ $dogumTarihi = htmlspecialchars($_POST['dogumTarihi'] ?? '');
 $konu = htmlspecialchars($_POST['konu'] ?? '');
 $iletisimTercihi = htmlspecialchars($_POST['iletisimTercihi'] ?? '');
 $mesaj = htmlspecialchars($_POST['mesaj'] ?? '');
-$dosya = htmlspecialchars($_POST['dosya'] ?? '');
+$dosya = '';
 $kvkk = isset($_POST['kvkk']) ? 'Evet' : 'Hayir';
 
 $konuLabels = [
@@ -43,13 +43,13 @@ $tercihDisplay = $tercihLabels[$iletisimTercihi] ?? $iletisimTercihi;
         <div class="container">
             <a class="navbar-brand" href="../index.html">Web Projesi</a>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Hakkinda</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="../sehir.html">Sehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../miras.html">Mirasi</a></li>
-                <li class="nav-item"><a class="nav-link" href="../ilgi.html">Ilgi Alanlarim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../iletisim.html">Iletisim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../login.html">Giris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../sehir.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link" href="../miras.html">Takımımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="../ilgi.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link" href="../iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Giriş</a></li>
             </ul>
         </div>
     </nav>
@@ -64,7 +64,7 @@ $tercihDisplay = $tercihLabels[$iletisimTercihi] ?? $iletisimTercihi;
                             <thead>
                                 <tr>
                                     <th>Alan</th>
-                                    <th>Deger</th>
+                                    <th>Değer</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,12 +80,12 @@ $tercihDisplay = $tercihLabels[$iletisimTercihi] ?? $iletisimTercihi;
                                     <td><strong>Telefon</strong></td>
                                     <td><?php echo $tel; ?></td>
                                 </tr>
+                <tr>
+                    <td><strong>Şifre</strong></td>
+                    <td><?php echo $password; ?></td>
+                </tr>
                                 <tr>
-                                    <td><strong>Sifre</strong></td>
-                                    <td><?php echo str_repeat('*', strlen($password)); ?></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Dogum Tarihi</strong></td>
+                                    <td><strong>Doğum Tarihi</strong></td>
                                     <td><?php echo $dogumTarihi; ?></td>
                                 </tr>
                                 <tr>
@@ -93,25 +93,22 @@ $tercihDisplay = $tercihLabels[$iletisimTercihi] ?? $iletisimTercihi;
                                     <td><?php echo $konuDisplay; ?></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Iletisim Tercihi</strong></td>
+                                    <td><strong>İletişim Tercihi</strong></td>
                                     <td><?php echo $tercihDisplay; ?></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Mesaj</strong></td>
                                     <td><?php echo nl2br($mesaj); ?></td>
                                 </tr>
+
                                 <tr>
-                                    <td><strong>Dosya</strong></td>
-                                    <td><?php echo $dosya ?: 'Secilmedi'; ?></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>KVKK Onayi</strong></td>
+                                    <td><strong>KVKK Onayı</strong></td>
                                     <td><?php echo $kvkk; ?></td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="text-center mt-4">
-                            <a href="../iletisim.html" class="btn btn-primary btn-lg">Geri Don</a>
+                            <a href="../iletisim.html" class="btn btn-primary btn-lg">Geri Dön</a>
                         </div>
                     </div>
                 </div>

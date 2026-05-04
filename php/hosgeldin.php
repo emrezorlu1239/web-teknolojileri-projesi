@@ -16,7 +16,7 @@
                 <li class="nav-item"><a class="nav-link" href="../index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="../sehir.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../miras.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="../miras.html">Takımımız</a></li>
                 <li class="nav-item"><a class="nav-link" href="../ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="../iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="../login.html">Giriş</a></li>
@@ -48,7 +48,7 @@
                         <li><a href="../index.html">Hakkında</a></li>
                         <li><a href="../cv.html">CV</a></li>
                         <li><a href="../sehir.html">Şehrim</a></li>
-                        <li><a href="../miras.html">Mirasımız</a></li>
+                        <li><a href="../miras.html">Takımımız</a></li>
                         <li><a href="../iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
@@ -57,11 +57,11 @@
                     <ul>
                         <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
                         <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
-                        <li><a href="https://linkedin.com/in/emrezorlu" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank">LinkedIn</a></li>
                     </ul>
                     <div class="footer-social">
                         <a href="https://github.com/emrezorlu1239" target="_blank"><i class="bi bi-github"></i></a>
-                        <a href="https://linkedin.com/in/emrezorlu" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank"><i class="bi bi-linkedin"></i></a>
                         <a href="mailto:ornek@email.com"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
