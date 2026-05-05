@@ -8,66 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .cv-header {
-            background: linear-gradient(135deg, #eef7f1 0%, #dff2e5 100%);
-            border-radius: 1rem;
-            margin-bottom: 2rem;
-        }
-        .cv-header h1 {
-            color: #000;
-            font-weight: 700;
-        }
-        .cv-profile-img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-        .section-title {
-            color: #00A651;
-        }
-        .cv-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
-            height: 100%;
-        }
-        .edu-card {
-            background: #f8f9fa;
-            padding: 1.25rem;
-            border-radius: 0.75rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #00A651;
-        }
-        .github-card-btn {
-            background-color: #24292e;
-            color: #fff;
-            border: none;
-            border-radius: 2rem;
-            padding: 0.6rem 1.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .github-card-btn:hover {
-            background-color: #00A651;
-            color: #fff;
-        }
-        footer {
-            background: linear-gradient(135deg, #0f1f16 0%, #143524 50%, #1f5a38 100%);
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark fixed-top">
@@ -77,7 +17,7 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="miras.html">Takımımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="takim.html">Takımımız</a></li>
                 <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
@@ -98,46 +38,48 @@
     </header>
 
     <main class="container my-5">
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="cv-card">
+        <section id="cv-icerik" class="row g-4">
+            <article class="col-lg-6">
+                <section class="cv-card">
                     <h2 class="section-title mb-4">Profil Özeti</h2>
-                    <p>Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak, modern web teknolojileri ve yazılım geliştirme süreçlerine tutkuyla yaklaşan bir geliştiriciyim.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="cv-card">
+                    <p>Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak, Veri Bilimi ve Yapay Zeka alanlarında uzmanlaşmaya odaklanıyorum. Makine öğrenmesi algoritmalarıyla projeler geliştirirken, karmaşık veri setlerinden anlamlı sonuçlar çıkarmayı ve modern geliştirme araçlarını etkin bir şekilde kullanmayı hedefliyorum.</p>
+                </section>
+            </article>
+            <article class="col-lg-6">
+                <section class="cv-card">
                     <h2 class="section-title mb-4">Eğitim</h2>
                     <div class="edu-card">
                         <h3 class="h5">Bilgisayar Mühendisliği (Lisans)</h3>
                         <p class="edu-school">Sakarya Üniversitesi</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="cv-card">
+                </section>
+            </article>
+            <article class="col-lg-4">
+                <section class="cv-card">
                     <h2 class="section-title mb-4">Kariyer Hedefi</h2>
-                    <p>Modern yazılım geliştirme yaklaşımlarını takip ederek, web teknolojileri alanında projeler üretmek.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="cv-card">
+                    <p>Gelecekte Yapay Zeka Sistemleri Mimarı olarak karmaşık sistemlerin mimarisini tasarlamayı ve uçtan uca yazılım geliştirme yetkinliği kazanmayı amaçlıyorum. Özellikle finansal teknolojiler ve gerçek zamanlı veri analitiği üzerine yoğunlaşarak, global standartlarda yenilikçi çözümler üreten bir mühendis olmayı hedefliyorum.</p>
+                </section>
+            </article>
+            <article class="col-lg-4">
+                <section class="cv-card">
                     <h2 class="section-title mb-4">Diller</h2>
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between">Türkçe<span class="badge bg-primary">Ana Dil</span></li>
                         <li class="list-group-item d-flex justify-content-between">İngilizce<span class="badge bg-success">İleri Seviye</span></li>
                     </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="cv-card">
+                </section>
+            </article>
+            <article class="col-lg-4">
+                <section class="cv-card">
                     <h2 class="section-title mb-4">GitHub Profili</h2>
-                    <a href="https://github.com/emrezorlu1239" target="_blank" class="github-card-btn">
-                        <i class="bi bi-github"></i> GitHub Profilim
-                    </a>
-                </div>
-            </div>
-        </div>
+                    <div class="text-center">
+                        <a href="https://github.com/emrezorlu1239" target="_blank" class="github-card-btn btn-lg">
+                            <i class="bi bi-github fs-4"></i> GitHub Profilim
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </section>
     </main>
 
     <footer>
@@ -153,21 +95,21 @@
                         <li><a href="index.html">Hakkında</a></li>
                         <li><a href="cv.html">CV</a></li>
                         <li><a href="sehir.html">Şehrim</a></li>
-                        <li><a href="miras.html">Takımımız</a></li>
+                        <li><a href="takim.html">Takımımız</a></li>
                         <li><a href="iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>İletişim</h5>
                     <ul>
-                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                        <li><a href="mailto:b241210037@sakarya.edu.tr">b241210037@sakarya.edu.tr</a></li>
                         <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
                         <li><a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank">LinkedIn</a></li>
                     </ul>
                     <div class="footer-social">
                         <a href="https://github.com/emrezorlu1239" target="_blank"><i class="bi bi-github"></i></a>
                         <a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:ornek@email.com"><i class="bi bi-envelope"></i></a>
+                        <a href="mailto:b241210037@sakarya.edu.tr"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>

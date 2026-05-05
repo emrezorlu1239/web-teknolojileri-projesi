@@ -46,7 +46,7 @@ $tercihDisplay = $tercihLabels[$iletisimTercihi] ?? $iletisimTercihi;
                 <li class="nav-item"><a class="nav-link" href="../index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="../sehir.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../miras.html">Takımımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="../takim.html">Takımımız</a></li>
                 <li class="nav-item"><a class="nav-link" href="../ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="../iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="../login.html">Giriş</a></li>

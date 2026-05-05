@@ -17,7 +17,7 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link active" href="sehir.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="miras.html">Takımımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="takim.html">Takımımız</a></li>
                 <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
@@ -25,13 +25,129 @@
         </div>
     </nav>
 
-    <main class="container my-5 py-5">
-        <h1 class="text-center mb-5">Şehrim: Sakarya</h1>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <p class="lead">Sakarya, Marmara Bölgesi'nde yer alan doğal güzellikleriyle ünlü bir şehirdir.</p>
-            </div>
+    <header class="city-header text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Sakarya</h1>
+            <p class="lead">Doğası, tarihi ve kültürüyle Marmara'nın en özel şehirlerinden biri</p>
         </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="sehir-fotograflari" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Şehirden Kareler</h2>
+                <div class="carousel-slider" id="carouselSlider">
+                    <div class="carousel-window">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide active">
+                                <div class="slide-image">
+                                    <img src="img/sehir/Gemini_Generated_Image_4swakz4swakz4swa.png" alt="Sakarya">
+                                    <div class="slide-glass"></div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-image">
+                                    <img src="img/sehir/Gemini_Generated_Image_719nqy719nqy719n.png" alt="Sakarya">
+                                    <div class="slide-glass"></div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-image">
+                                    <img src="img/sehir/Gemini_Generated_Image_dv0c1kdv0c1kdv0c.png" alt="Sakarya">
+                                    <div class="slide-glass"></div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-image">
+                                    <img src="img/sehir/Gemini_Generated_Image_tbxbf7tbxbf7tbxb.png" alt="Sakarya">
+                                    <div class="slide-glass"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="c-arrow c-prev" id="cPrev" aria-label="Önceki">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="c-arrow c-next" id="cNext" aria-label="Sonraki">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <div class="c-progress">
+                        <div class="c-progress-bar" id="cProgressBar"></div>
+                    </div>
+                </div>
+                <div class="carousel-thumbs" id="carouselThumbs">
+                    <button class="thumb active" data-index="0">
+                        <img src="img/sehir/Gemini_Generated_Image_4swakz4swakz4swa.png" alt="">
+                    </button>
+                    <button class="thumb" data-index="1">
+                        <img src="img/sehir/Gemini_Generated_Image_719nqy719nqy719n.png" alt="">
+                    </button>
+                    <button class="thumb" data-index="2">
+                        <img src="img/sehir/Gemini_Generated_Image_dv0c1kdv0c1kdv0c.png" alt="">
+                    </button>
+                    <button class="thumb" data-index="3">
+                        <img src="img/sehir/Gemini_Generated_Image_tbxbf7tbxbf7tbxb.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sakarya-tanitim" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Sakarya'yı Tanıyalım</h2>
+                <div class="sakarya-details-text">
+                    <p class="sakarya-detail-paragraph">
+                        <i class="bi bi-geo-alt-fill accent-icon"></i>
+                        <strong>Sakarya</strong>, Marmara Bölgesi'nin doğusunda yer alan; tarihi, doğal güzellikleri ve misafirperver insanlarıyla Türkiye'nin en çekici şehirlerinden biridir. Sakarya Nehri'ne adını veren bu bereketli topraklar, tarih boyunca birçok medeniyete ev sahipliği yapmıştır. Şehir, bir yandan Sapanca Gölü'nün eşsiz sakinliği ve Kartepe'nin yemyeşil ormanlarıyla doğa tutkunlarına hitap ederken, diğer yandan 5 Temmuz 1889'da Adapazarı'nda kurulan ve şehrin kalbi olan çarşısıyla ticari canlılığını sürdürmektedir.
+                    </p>
+                    <p class="sakarya-detail-paragraph">
+                        Sakarya'nın en bilinen doğal hazinelerinden Acarlar Longozu, dünyada ender bulunan longoz ormanlarından biridir ve biyolojik çeşitlilik açısından büyük önem taşır. Taraklı ilçesi ise restore edilmiş Osmanlı konakları, taş sokakları ve geleneksel dokusuyla "Sakin Şehir" unvanını taşır. Ayrıca şehir, Kurtuluş Savaşı'nın dönüm noktası olan Sakarya Meydan Muharebesi'ne sahne olmuş olmasıyla Türk tarihinde özel bir yere sahiptir. Termal kaynakları, yaylaları, rafting ve doğa yürüyüşü imkânlarıyla Sakarya, her mevsim ziyaretçilerine farklı deneyimler sunan bir turizm cennetidir.
+                    </p>
+                    <div class="sakarya-info-box">
+                        <p class="info-box-title">
+                            <i class="bi bi-info-circle-fill"></i> Şehirden Bilgiler
+                        </p>
+                        <p class="info-box-text">
+                            Sakarya'nın yüzölçümü <strong>4.895 km²</strong> olup 2024 verilerine göre nüfusu yaklaşık <strong>1.100.000</strong> kişidir. Şehir <strong>Adapazarı, Akyazı, Arifiye, Erenler, Ferizli, Geyve, Hendek, Karapürçek, Karasu, Kaynarca, Kocaali, Pamukova, Sapanca, Serdivan, Söğütlü</strong> ve <strong>Taraklı</strong> olmak üzere 16 ilçeye sahiptir.
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6 col-lg-3">
+                        <article class="place-card h-100">
+                            <img src="img/sehir1.webp" alt="Sakarya fotograf 1" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-0">Sapanca Gölü</h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="place-card h-100">
+                            <img src="img/slider1.jpg" alt="Sakarya fotograf 2" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-0">Acarlar Longozu</h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="place-card h-100">
+                            <img src="img/foto1.webp" alt="Sakarya fotograf 3" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-0">Taraklı Evleri</h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <article class="place-card h-100">
+                            <img src="img/sehir4.jpg" alt="Sakarya fotograf 4" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-0">Beş Köprü</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -47,21 +163,21 @@
                         <li><a href="index.html">Hakkında</a></li>
                         <li><a href="cv.html">CV</a></li>
                         <li><a href="sehir.html">Şehrim</a></li>
-                        <li><a href="miras.html">Takımımız</a></li>
+                        <li><a href="takim.html">Takımımız</a></li>
                         <li><a href="iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>İletişim</h5>
                     <ul>
-                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                        <li><a href="mailto:b241210037@sakarya.edu.tr">b241210037@sakarya.edu.tr</a></li>
                         <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
                         <li><a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank">LinkedIn</a></li>
                     </ul>
                     <div class="footer-social">
                         <a href="https://github.com/emrezorlu1239" target="_blank"><i class="bi bi-github"></i></a>
                         <a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:ornek@email.com"><i class="bi bi-envelope"></i></a>
+                        <a href="mailto:b241210037@sakarya.edu.tr"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
