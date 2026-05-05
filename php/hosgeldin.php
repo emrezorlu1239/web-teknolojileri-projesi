@@ -1,3 +1,11 @@
+<?php
+session_start();
+$ogrenci_no = isset($_SESSION['ogrenci_no']) ? $_SESSION['ogrenci_no'] : '';
+if (!$ogrenci_no) {
+    header("Location: ../login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -16,7 +24,7 @@
                 <li class="nav-item"><a class="nav-link" href="../index.html">Hakkında</a></li>
                 <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="../sehir.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="../miras.html">Takımımız</a></li>
+                <li class="nav-item"><a class="nav-link" href="../takim.html">Takımımız</a></li>
                 <li class="nav-item"><a class="nav-link" href="../ilgi.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link" href="../iletisim.html">İletişim</a></li>
                 <li class="nav-item"><a class="nav-link" href="../login.html">Giriş</a></li>
@@ -29,7 +37,7 @@
             <div class="mb-4">
                 <i class="bi bi-check-circle-fill text-success" style="font-size: 6rem;"></i>
             </div>
-            <h1 class="display-4 fw-bold mb-3">Hoşgeldiniz b241210037</h1>
+            <h1 class="display-4 fw-bold mb-3">Hoşgeldiniz <?php echo $ogrenci_no; ?></h1>
             <p class="lead text-muted mb-4">Giriş işlemi başarıyla tamamlandı.</p>
             <a href="../index.html" class="btn btn-primary btn-lg px-5 py-2 fw-semibold">Ana Sayfaya Dön</a>
         </div>
@@ -48,21 +56,21 @@
                         <li><a href="../index.html">Hakkında</a></li>
                         <li><a href="../cv.html">CV</a></li>
                         <li><a href="../sehir.html">Şehrim</a></li>
-                        <li><a href="../miras.html">Takımımız</a></li>
+                        <li><a href="../takim.html">Takımımız</a></li>
                         <li><a href="../iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>İletişim</h5>
                     <ul>
-                        <li><a href="mailto:ornek@email.com">ornek@email.com</a></li>
+                        <li><a href="mailto:b241210037@sakarya.edu.tr">b241210037@sakarya.edu.tr</a></li>
                         <li><a href="https://github.com/emrezorlu1239" target="_blank">GitHub</a></li>
                         <li><a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank">LinkedIn</a></li>
                     </ul>
                     <div class="footer-social">
                         <a href="https://github.com/emrezorlu1239" target="_blank"><i class="bi bi-github"></i></a>
                         <a href="https://www.linkedin.com/in/emre-zorlu-61131b31a/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:ornek@email.com"><i class="bi bi-envelope"></i></a>
+                        <a href="mailto:b241210037@sakarya.edu.tr"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
