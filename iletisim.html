@@ -202,6 +202,15 @@
                     if (!this.vueForm.tel.trim()) {
                         this.vueErrors.tel = 'Telefon numarası zorunludur.';
                         isValid = false;
+                    } else {
+                        const phoneDigits = this.vueForm.tel.replace(/\D/g, '');
+                        if (phoneDigits.length !== 10) {
+                            this.vueErrors.tel = 'Telefon numarası 10 haneli olmalıdır (5XX XXX XX XX).';
+                            isValid = false;
+                        } else if (!phoneDigits.startsWith('5')) {
+                            this.vueErrors.tel = 'Telefon numarası 5 ile başlamalıdır.';
+                            isValid = false;
+                        }
                     }
 
                     if (!this.vueForm.password.trim()) {

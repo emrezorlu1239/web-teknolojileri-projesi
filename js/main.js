@@ -15,20 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    navLinks.forEach(function(link) {
         const href = link.getAttribute('href');
         if (href === currentPage) {
             link.classList.add('active');
         }
     });
 
-    document.querySelectorAll('main, section, header').forEach(section => {
+    document.querySelectorAll('main, section, header').forEach(function(section) {
         section.classList.add('fade-in');
     });
 
     const cards = document.querySelectorAll('.card, .info-card, .place-card, .experience-card');
-    cards.forEach((card, index) => {
-        card.classList.add(`fade-in-delay-${(index % 5) + 1}`);
+    cards.forEach(function(card, index) {
+        card.classList.add('fade-in-delay-' + ((index % 5) + 1));
     });
 
     // İletişim Formu Doğrulama
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nativeValidateBtn.addEventListener('click', function() {
             let isValid = true;
 
-            const validateField = (id, condition, errorMsg) => {
+            const validateField = function(id, condition, errorMsg) {
                 const el = document.getElementById(id);
                 const errorEl = document.getElementById(id + 'Error');
                 if (!el || !errorEl) return;
@@ -67,7 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const tel = document.getElementById('tel');
             const telDigits = tel.value.replace(/\D/g, '');
-            validateField('tel', tel.value.trim() !== '' && telDigits.length > 0, 'Telefon numarası sadece rakamlardan oluşmalıdır.');
+            if (!tel.value.trim()) {
+                validateField('tel', false, 'Telefon numarası zorunludur.');
+            } else if (telDigits.length !== 10) {
+                validateField('tel', false, 'Telefon numarası 10 haneli olmalıdır (5XX XXX XX XX).');
+            } else if (!telDigits.startsWith('5')) {
+                validateField('tel', false, 'Telefon numarası 5 ile başlamalıdır.');
+            } else {
+                validateField('tel', true, '');
+            }
 
             const password = document.getElementById('password');
             validateField('password', password.value.trim() !== '', 'Şifre alanı boş bırakılamaz.');
@@ -110,13 +118,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 10) value = value.substring(0, 10);
             if (value.length > 9) {
-                value = `(${value.slice(0,3)}) ${value.slice(3,6)} ${value.slice(6,8)} ${value.slice(8)}`;
+                value = '(' + value.slice(0,3) + ') ' + value.slice(3,6) + ' ' + value.slice(6,8) + ' ' + value.slice(8);
             } else if (value.length > 6) {
-                value = `(${value.slice(0,3)}) ${value.slice(3,6)} ${value.slice(6)}`;
+                value = '(' + value.slice(0,3) + ') ' + value.slice(3,6) + ' ' + value.slice(6);
             } else if (value.length > 3) {
-                value = `(${value.slice(0,3)}) ${value.slice(3)}`;
+                value = '(' + value.slice(0,3) + ') ' + value.slice(3);
             } else if (value.length > 0) {
-                value = `(${value}`;
+                value = '(' + value;
             }
             e.target.value = value;
         });
@@ -189,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slides[idx].classList.remove('active');
             thumbs[idx].classList.remove('active');
             idx = i;
-            carouselTrack.style.transform = `translateX(-${idx * 100}%)`;
+            carouselTrack.style.transform = 'translateX(-' + (idx * 100) + '%)';
             slides[idx].classList.add('active');
             thumbs[idx].classList.add('active');
             progressBar.style.width = ((idx + 1) / slides.length * 100) + '%';
@@ -198,18 +206,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function resetAuto() {
             clearInterval(autoTimer);
-            autoTimer = setInterval(() => {
+            autoTimer = setInterval(function() {
                 goTo((idx + 1) % slides.length);
             }, 4000);
         }
 
-        prevBtn.addEventListener('click', () => goTo((idx - 1 + slides.length) % slides.length));
-        nextBtn.addEventListener('click', () => goTo((idx + 1) % slides.length));
-        thumbs.forEach(t => t.addEventListener('click', () => goTo(+t.dataset.index)));
+        prevBtn.addEventListener('click', function() { goTo((idx - 1 + slides.length) % slides.length); });
+        nextBtn.addEventListener('click', function() { goTo((idx + 1) % slides.length); });
+        thumbs.forEach(function(t) { t.addEventListener('click', function() { goTo(+t.dataset.index); }); });
 
         let startX = 0;
-        carouselTrack.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
-        carouselTrack.addEventListener('touchend', e => {
+        carouselTrack.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+        carouselTrack.addEventListener('touchend', function(e) {
             const diff = e.changedTouches[0].clientX - startX;
             if (diff < -50) goTo((idx + 1) % slides.length);
             else if (diff > 50) goTo((idx - 1 + slides.length) % slides.length);
@@ -243,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function getPlatforms(game) {
             if (!game.platforms || game.platforms.length === 0) return 'Bilinmiyor';
-            return game.platforms.map(p => p.platform.name).join(', ');
+            return game.platforms.map(function(p) { return p.platform.name; }).join(', ');
         }
 
         function createGameCard(game) {
@@ -252,25 +260,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const released = game.released || 'Bilinmiyor';
             const platforms = getPlatforms(game);
 
-            return `
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
-                        <img src="${image}" class="card-img-top" alt="${game.name}" style="height: 200px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${game.name}</h5>
-                            <p class="card-text mb-1">
-                                <i class="bi bi-star-fill text-warning"></i> <strong>Puan:</strong> ${rating}
-                            </p>
-                            <p class="card-text mb-1">
-                                <i class="bi bi-calendar-event"></i> <strong>Cikis:</strong> ${released}
-                            </p>
-                            <p class="card-text text-muted small mt-auto">
-                                <i class="bi bi-controller"></i> ${platforms}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            return '<div class="col-md-6 col-lg-4 mb-4">' +
+                     '<div class="card h-100">' +
+                         '<img src="' + image + '" class="card-img-top" alt="' + game.name + '" style="height: 200px; object-fit: cover;">' +
+                         '<div class="card-body d-flex flex-column">' +
+                             '<h5 class="card-title">' + game.name + '</h5>' +
+                             '<p class="card-text mb-1">' +
+                                 '<i class="bi bi-star-fill text-warning"></i> <strong>Puan:</strong> ' + rating +
+                             '</p>' +
+                             '<p class="card-text mb-1">' +
+                                 '<i class="bi bi-calendar-event"></i> <strong>Çıkış:</strong> ' + released +
+                             '</p>' +
+                             '<p class="card-text text-muted small mt-auto">' +
+                                 '<i class="bi bi-controller"></i> ' + platforms +
+                             '</p>' +
+                         '</div>' +
+                     '</div>' +
+                 '</div>';
         }
 
         async function fetchSpecificGames() {
@@ -278,24 +284,24 @@ document.addEventListener('DOMContentLoaded', function() {
             gamesContainer.innerHTML = '';
             errorMsg.classList.add('d-none');
             try {
-                const requests = myGames.map(name =>
-                    fetch(`${BASE_URL}?key=${API_KEY}&page_size=1&search=${encodeURIComponent(name)}`)
-                        .then(res => {
-                            if (!res.ok) throw new Error('API hatasi');
+                const requests = myGames.map(function(name) {
+                    return fetch(BASE_URL + '?key=' + API_KEY + '&page_size=1&search=' + encodeURIComponent(name))
+                        .then(function(res) {
+                            if (!res.ok) throw new Error('API hatası');
                             return res.json();
                         })
-                        .then(data => {
+                        .then(function(data) {
                             if (data.results && data.results.length > 0) return data.results[0];
                             return null;
-                        })
-                );
+                        });
+                });
                 const results = await Promise.all(requests);
-                const games = results.filter(g => g !== null);
+                const games = results.filter(function(g) { return g !== null; });
                 spinner.classList.add('d-none');
                 if (games.length > 0) {
                     gamesContainer.innerHTML = games.map(createGameCard).join('');
                 } else {
-                    gamesContainer.innerHTML = '<div class="col-12 text-center text-muted">Sonuc bulunamadi.</div>';
+                    gamesContainer.innerHTML = '<div class="col-12 text-center text-muted">Sonuç bulunamadı.</div>';
                 }
             } catch (error) {
                 spinner.classList.add('d-none');
