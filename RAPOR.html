@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teknolojileri Proje Raporu</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 210mm; margin: 0 auto; padding: 20px; background: #fff; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #32a852; padding-bottom: 10px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-top: 30px; }
+        h3 { color: #32a852; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #32a852; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .page-section { margin: 40px 0; page-break-inside: avoid; }
+        .screenshot { width: 100%; border: 1px solid #ddd; border-radius: 5px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .info-box { background: #e8f5e9; border-left: 4px solid #32a852; padding: 15px; margin: 15px 0; }
+        .check { color: #27ae60; font-weight: bold; }
+        .header-info { background: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 30px; }
+        .header-info p { margin: 5px 0; }
+        .code { background: #f4f4f4; padding: 10px; border-radius: 3px; font-family: monospace; }
+        ul { padding-left: 25px; }
+        li { margin: 5px 0; }
+        @media print { body { max-width: 100%; } .page-section { page-break-inside: avoid; } }
+    </style>
+</head>
+<body>
+    <h1>WEB TEKNOLOJILERI DERSI - PROJE RAPORU</h1>
+    
+    <div class="header-info">
+        <p><strong>Universite:</strong> Sakarya Universitesi</p>
+        <p><strong>Bolum:</strong> Bilgisayar Muhendisligi</p>
+        <p><strong>Ders:</strong> Web Teknolojileri</p>
+        <p><strong>Donem:</strong> 2025-2026 Bahar Donemi</p>
+        <p><strong>Ogretim Uyesi:</strong> Öğr.Gör.Dr. AHMET ŞANSL</p>
+        <p><strong>Ogrenci:</strong> Emre Zorlu</p>
+        <p><strong>Ogrenci No:</strong> b241210037</p>
+        <p><strong>GitHub Repo:</strong> <a href="https://github.com/emrezorlu1239/web-teknolojileri-projesi">https://github.com/emrezorlu1239/web-teknolojileri-projesi</a></p>
+        <p><strong>Canli Site:</strong> <a href="https://emrezorlu.infinityfree.me">https://emrezorlu.infinityfree.me</a></p>
+    </div>
+
+    <h2>1. PROJE AMACI</h2>
+    <p>Dönem boyunca işlenen web standartları (Semantik HTML5, Responsive Design, JavaScript, PHP) kullanılarak; hem kişisel tanıtım hem de teknik becerileri sergileyen profesyonel bir web uygulaması geliştirmektir.</p>
+
+    <h2>2. KULLANILAN TEKNOLOJILER</h2>
+    <ul>
+        <li><strong>HTML5:</strong> Semantik etiketler (header, section, article, nav, footer)</li>
+        <li><strong>CSS3:</strong> Harici stil dosyası (style.css - 1106 satır)</li>
+        <li><strong>Bootstrap 5.3.2:</strong> Responsive tasarım için</li>
+        <li><strong>JavaScript (ES6+):</strong> Form doğrulama, API entegrasyonu, slider</li>
+        <li><strong>Vue.js 3:</strong> İletişim formu için alternatif doğrulama</li>
+        <li><strong>PHP:</strong> Sunucu taraflı işlemler ve oturum yönetimi</li>
+        <li><strong>RAWG API:</strong> Oyun verilerini çekmek için ücretsiz API</li>
+    </ul>
+
+    <h2>3. SAYFA SAYFA INCELEME</h2>
+
+    <div class="page-section">
+        <h3>3.1. Hakkında (Giriş) Sayfası - index.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Site ziyaretçisini karşılayan ana sayfadır. Sayfa sahibi Emre Zorlu'yu tanıtan bilgiler içerir. Profil fotoğrafı, kişisel açıklama ve hobiler bölümü yer alır. Sayfanın alt kısmında sosyal medya bağlantıları (GitHub, LinkedIn, Kaggle) bulunur.
+        </div>
+        <p><strong>İçerikler:</strong></p>
+        <ul>
+            <li>Hero bölümü: Profil fotoğrafı ve karşılama metni</li>
+            <li>Hakkımda bölümü: Kısa kişisel açıklama</li>
+            <li>Hobilerim: 4 kart halinde (Oyun Oynamak, Film İzlemek, Kitap Okumak, Kodlama Yapmak)</li>
+            <li>Sosyal Platformlarım: GitHub, LinkedIn, Kaggle bağlantıları</li>
+        </ul>
+        <img src="img/screenshot_index.png" alt="Hakkında Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.2. Özgeçmiş (CV) Sayfası - cv.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Eğitim bilgilerini içeren ve Semantic HTML5 etiketleri kullanılarak kurgulanmış özgeçmiş sayfasıdır. <code>header</code>, <code>section</code>, <code>article</code> etiketleriyle yapılandırılmıştır.
+        </div>
+        <p><strong>İçerikler:</strong></p>
+        <ul>
+            <li>Profil fotoğrafı ve başlık</li>
+            <li>Profil özeti: Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisi</li>
+            <li>Eğitim bilgileri: Lisans derecesi</li>
+            <li>Kariyer hedefi: Yapay Zeka Sistemleri Mimarisi</li>
+            <li>Yabancı diller: Türkçe (Anadil), İngilizce (İleri Seviye)</li>
+        </ul>
+        <img src="img/screenshot_cv.png" alt="CV Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.3. Şehrim Sayfası - sehir.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Sakarya şehrine ait tanıtıcı bilgilerin yer aldığı sayfadır. Şehrin nüfusu, gezilecek yerleri ve tarihi hakkında detaylı bilgiler içerir.
+        </div>
+        <p><strong>İçerikler:</strong></p>
+        <ul>
+            <li><strong>Özel Tasarım Slider:</strong> 4 resimden oluşan, tıklanabilir slider
+                <ul>
+                    <li>Önceki/Sonraki okları</li>
+                    <li>İlerleme çubuğu</li>
+                    <li>Küçük resim navigasyonu</li>
+                    <li>Otomatik oynatma (4 saniye aralık)</li>
+                    <li>Dokunma/kaydırma desteği</li>
+                </ul>
+            </li>
+            <li>Şehir hakkında detaylı metin (tarih, doğa, kültür)</li>
+            <li>Bilgi kutusu: Yüzölçümü (4,895 km²), Nüfus (~1.1M), 16 ilçe</li>
+            <li>Gezilecek yerler: Sapanca Gölü, Acarlar Longozu, Taraklı Evleri, Beş Köprü</li>
+        </ul>
+        <img src="img/screenshot_sehir.png" alt="Şehrim Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.4. Mirasımız / Takımımız Sayfası - takim.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Sakarya'nın spor takımı olan Sakaryaspor'un HTML elemanlarıyla detaylandırıldığı sayfadır.
+        </div>
+        <p><strong>İçerikler:</strong></p>
+        <ul>
+            <li>Takım logosu ve renkleri (Yeşil-Beyaz)</li>
+            <li>Kuruluş yılı: 1965</li>
+            <li>Stadyum: Sakarya Atatürk Stadyumu (Kapasite: 28,950)</li>
+            <li>Lig: TFF 1. Lig</li>
+            <li>Stadyum detay tablosu (isim, kapasite, konum, yüzey)</li>
+            <li>Başarılar tablosu (Türkiye Kupası, Başbakanlık Kupası, Lig Şampiyonlukları)</li>
+        </ul>
+        <img src="img/screenshot_takim.png" alt="Takım Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.5. İlgi Alanlarım (API Entegrasyonu) - ilgi.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> İnternet üzerinden bulunan ücretsiz RAWG API servisinden oyun verileri çekilerek site içinde gösterilmiştir. Döviz ve hava durumu API'leri kullanılmamıştır.
+        </div>
+        <p><strong>İçerikler:</strong></p>
+        <ul>
+            <li>RAWG API entegrasyonu (https://api.rawg.io/api/games)</li>
+            <li>Yükleme animasyonu (spinner)</li>
+            <li>Hata mesajı görüntüleme</li>
+            <li>12 adet oyun kartı ile: Oyun kapağı, puanlama, çıkış tarihi, platformlar</li>
+            <li>Oyunlar: The Witcher 3, Red Dead Redemption 2, God of War, Elden Ring, Cyberpunk 2077, GTA V, Minecraft, The Last of Us Part II, Half-Life, Dark Souls III, Portal 2, Sekiro</li>
+        </ul>
+        <img src="img/screenshot_ilgi.png" alt="İlgi Alanlarım Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.6. İletişim Sayfası - iletisim.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Tüm form elemanlarını içeren iletişim sayfasıdır. Formun tüm elemanları kontrol edilmektedir.
+        </div>
+        <p><strong>Form Elemanları:</strong></p>
+        <ul>
+            <li>Ad Soyad (text)</li>
+            <li>E-posta (email)</li>
+            <li>Telefon (telefon - otomatik format: (5XX) XXX XX XX)</li>
+            <li>Şifre (password)</li>
+            <li>Doğum Tarihi (date - maksimum bugünün tarihi)</li>
+            <li>Konu Seçimi (select): Genel Bilgi, Teknik Destek, Öneri/Şikayet</li>
+            <li>İletişim Tercihi (radio): Telefon, E-posta</li>
+            <li>Mesaj (textarea)</li>
+            <li>KVKK onay kutusu (checkbox)</li>
+        </ul>
+        <p><strong>Çift Doğrulama Sistemi:</strong></p>
+        <ul>
+            <li><strong>Native JavaScript Doğrulama</strong> (Buton: "Native JS Doğrula")
+                <ul>
+                    <li>Tüm alanların dolu olup olmadığı kontrolü</li>
+                    <li>E-posta formatı kontrolü</li>
+                    <li>Telefon: 10 rakam olmalı, 5 ile başlamalı</li>
+                    <li>Tarih kontrolü (gelecek tarih olamaz)</li>
+                </ul>
+            </li>
+            <li><strong>Vue.js 3 Doğrulama</strong> (Buton: "Vue JS Doğrula")
+                <ul>
+                    <li>Vue.js framework kullanılarak alternatif doğrulama</li>
+                    <li>Aynı kurallar uygulanır</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="img/screenshot_iletisim.png" alt="İletişim Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.7. Login Sayfası - login.html</h3>
+        <div class="info-box">
+            <strong>Açıklama:</strong> Uygulamanın güvenli giriş mekanizmasını test etmek için tasarlanan login sayfasıdır.
+        </div>
+        <p><strong>Giriş Bilgileri:</strong></p>
+        <ul>
+            <li>Kullanıcı adı: b241210037@sakarya.edu.tr</li>
+            <li>Şifre: b241210037</li>
+        </ul>
+        <p><strong>Özellikler:</strong></p>
+        <ul>
+            <li>Native JavaScript ile boş alan ve e-posta formatı kontrolü</li>
+            <li>Form POST ile php/login_islem.php'ye gönderilir</li>
+            <li>Doğru giriş: "Hoşgeldiniz b241210037" mesajı (hosgeldin.php)</li>
+            <li>Hatalı giriş: Hata mesajı ile login sayfasına yönlendirme</li>
+            <li>Session yönetimi ile güvenli geçiş</li>
+        </ul>
+        <img src="img/screenshot_login.png" alt="Login Sayfası" class="screenshot">
+    </div>
+
+    <div class="page-section">
+        <h3>3.8. Sunucu Tarafı İşlemleri (PHP)</h3>
+        
+        <h4>login_islem.php:</h4>
+        <ul>
+            <li>POST ile gelen e-posta ve şifre kontrolü</li>
+            <li>Karşılaştırma: b241210037@sakarya.edu.tr / b241210037</li>
+            <li>Başarılı ise session başlatılır ve hosgeldin.php'ye yönlendirilir</li>
+            <li>Başarısız ise error parametresi ile login.html'ye dönülür</li>
+        </ul>
+
+        <h4>hosgeldin.php:</h4>
+        <ul>
+            <li>Oturum kontrolü yapılır</li>
+            <li>"Hoşgeldiniz b241210037" mesajı görüntülenir</li>
+            <li>Başarı ikonu ve ana sayfaya dönüş linki</li>
+        </ul>
+        <img src="img/screenshot_hosgeldin.png" alt="Hoşgeldin Sayfası" class="screenshot">
+
+        <h4>iletisim_islem.php:</h4>
+        <ul>
+            <li>Tüm form verilerini POST ile alır</li>
+            <li>Styled tablo ile düzenli şekilde ekrana yazdırır</li>
+            <li>Güvenlik için htmlspecialchars() kullanılarak XSS koruması</li>
+            <li>Konu ve tercih alanları insan okunabilir etiketlere dönüştürülür</li>
+        </ul>
+    </div>
+
+    <h2>4. TEKNIK ZORUNLULUKLAR KONTROLÜ</h2>
+    <table>
+        <tr>
+            <th>Zorunluluk</th>
+            <th>Durum</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td>Bootstrap/Tailwind ile responsive tasarım</td>
+            <td class="check">✅</td>
+            <td>Bootstrap 5.3.2 kullanıldı</td>
+        </tr>
+        <tr>
+            <td>Hazır tema kullanımı yok</td>
+            <td class="check">✅</td>
+            <td>Özel tasarım (style.css)</td>
+        </tr>
+        <tr>
+            <td>Login sistemi (öğrenci no formatı)</td>
+            <td class="check">✅</td>
+            <td>b241210037@sakarya.edu.tr / b241210037</td>
+        </tr>
+        <tr>
+            <td>JavaScript ile boş alan ve e-posta kontrolü</td>
+            <td class="check">✅</td>
+            <td>main.js içinde doğrulama mevcut</td>
+        </tr>
+        <tr>
+            <td>Başarılı giriş mesajı</td>
+            <td class="check">✅</td>
+            <td>"Hoşgeldiniz b241210037"</td>
+        </tr>
+        <tr>
+            <td>İletişim formu tüm elemanları</td>
+            <td class="check">✅</td>
+            <td>text, email, tel, password, date, select, radio, checkbox, textarea</td>
+        </tr>
+        <tr>
+            <td>Çift doğrulama (Native JS + Framework)</td>
+            <td class="check">✅</td>
+            <td>Native JS ve Vue.js 3 ile iki buton</td>
+        </tr>
+        <tr>
+            <td>HTML5 required attr. tek başına değil</td>
+            <td class="check">✅</td>
+            <td>Ek JS doğrulaması yapıldı</td>
+        </tr>
+        <tr>
+            <td>Harici CSS dosyası</td>
+            <td class="check">✅</td>
+            <td>css/style.css (1106 satır)</td>
+        </tr>
+        <tr>
+            <td>Semantic HTML5 etiketleri</td>
+            <td class="check">✅</td>
+            <td>header, section, article, nav, footer</td>
+        </tr>
+        <tr>
+            <td>Slider (en az 4 resim, tıklanabilir)</td>
+            <td class="check">✅</td>
+            <td>Özel slider, 4 resim, tüm özellikler</td>
+        </tr>
+        <tr>
+            <td>API entegrasyonu (döviz/hava durumu hariç)</td>
+            <td class="check">✅</td>
+            <td>RAWG API - oyun verileri</td>
+        </tr>
+        <tr>
+            <td>PHP ile form işleme</td>
+            <td class="check">✅</td>
+            <td>iletisim_islem.php ve login_islem.php</td>
+        </tr>
+    </table>
+
+    <h2>5. GIT KULLANIMI</h2>
+    <p>Proje süreci boyunca farklı günlerde yapılan commit sayısı:</p>
+    <div class="code">
+2026-05-05 gun12: Kodda iyileştirmeler yapıldı<br>
+2026-05-05 gun 12: kodda iyileştirmeler yapıldı<br>
+2026-05-05 gun 12: tasarim iyilesitrmeleri yapildi<br>
+2026-05-05 gun 12: hosgeldin sayfasi session ile dinamik hale getirildi<br>
+2026-05-04 gun 11.2: LinkedIn eklendi, encoding duzeltildi<br>
+2026-05-03 gun 10: rawg api ile oyun entegrasyonu tamamlandi<br>
+2026-05-02 gun 9: login sayfasi ve php giris kontrolu tamamlandi<br>
+2026-05-01 gun 8: vue dogrulama ve php form isleme tamamlandi<br>
+2026-04-30 gun 7: duzeltmeler ve iletisim formu tamamlandi<br>
+2026-04-29 gun 6: tasarim guncellemeleri ve genel duzeltmeler<br>
+2026-04-28 gun 5: miras sayfasi tamamlandi<br>
+2026-04-27 gun 4: sehir sayfasi tamamlandi<br>
+2026-04-26 gun 3: cv sayfasi tamamlandi<br>
+2026-04-25 gun 2: hakkinda sayfasi tamamlandi
+    </div>
+    <p><strong>Toplam Commit Sayısı:</strong> 14+ (Farklı günlerde, şart olan 10 adet sağlandı)</p>
+
+    <h2>6. CANLI YAYIN (HOSTING)</h2>
+    <ul>
+        <li><strong>Hosting Servisi:</strong> InfinityFree</li>
+        <li><strong>Canlı Site Adresi:</strong> <a href="https://emrezorlu.infinityfree.me">https://emrezorlu.infinityfree.me</a></li>
+        <li>Site internet üzerinden erişilebilir durumdadır.</li>
+    </ul>
+
+    <h2>7. PROJE DIZIN YAPISI</h2>
+    <div class="code">
+web-teknolojileri-8/<br>
+├── css/<br>
+│   └── style.css              # Ana stil dosyası (1106 satır)<br>
+├── img/<br>
+│   ├── sehir/                 # Şehir resimleri (4 adet)<br>
+│   ├── profil.png             # Profil fotoğrafı<br>
+│   ├── sakaryaspor-forma.jpg<br>
+│   ├── sakaryaspor-logo.jpg<br>
+│   └── slider1.jpg<br>
+├── js/<br>
+│   └── main.js                # Ana JavaScript dosyası (316 satır)<br>
+├── php/<br>
+│   ├── hosgeldin.php          # Giriş başarılı sayfası<br>
+│   ├── iletisim_islem.php     # İletişim formu işleyici<br>
+│   └── login_islem.php        # Giriş kontrolü<br>
+├── index.html                 # Hakkında sayfası<br>
+├── cv.html                    # Özgeçmiş sayfası<br>
+├── sehir.html                 # Şehrim sayfası<br>
+├── takim.html                 # Takımımız sayfası<br>
+├── ilgi.html                  # İlgi Alanlarım (API)<br>
+├── iletisim.html              # İletişim sayfası<br>
+├── login.html                 # Giriş sayfası<br>
+├── RAPOR.html                 # Bu rapor<br>
+└── RAPOR.md                   # Markdown versiyonu
+    </div>
+
+    <h2>8. SONUÇ</h2>
+    <p>Proje, Web Teknolojileri dersi kapsamında belirtilen tüm teknik zorunlulukları karşılayacak şekilde tamamlanmıştır. HTML5, CSS3, JavaScript, Vue.js ve PHP teknolojileri kullanılarak; responsive, etkileşimli ve işlevsel bir web uygulaması geliştirilmiştir.</p>
+    <p>GitHub üzerinde proje süreci düzenli olarak paylaşılmış, farklı günlerde 10+ commit ile gelişim süreci belgelenmiştir. Canlı yayın InfinityFree üzerinden gerçekleştirilmiştir.</p>
+
+    <div style="margin-top: 50px; text-align: right;">
+        <p><strong>Rapor Tarihi:</strong> 6 Mayıs 2026</p>
+        <p><strong>Hazırlayan:</strong> Emre Zorlu (b241210037)</p>
+    </div>
+</body>
+</html>
